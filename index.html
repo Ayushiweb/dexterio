@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexterio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+      <header>
+          <div class="logo">
+              <img src="images/logo.png" alt="">
+          </div>
+          <div class="menu">
+              <ul>
+                  <li><a href="#">Home </a></li>
+                  <li><a href="#">Projects </a></li>
+                  <li><a href="#">Prefab Interior </a></li>
+                  <li><a href="#">Design Quiz </a></li>
+                  <li><a href="#">Magazine </a></li>
+              </ul>
+          </div>
+      </header>
+        <div id="text" style="position: relative; ">
+           <h1 id="text1" class="text_list" style="padding-top: 120px;">INTERIOR DESIGNS MADE AFFORDABLE</h1>
+           <h1 id="text2" class="hide text_list" style="align-items: center; padding-top: 20px;">
+              <span style="font-size: 26px; position:absolute; left:42%; top: 12%;">Rs.</span> <span style="font-size: 130px; font-weight: 800;">0</span> <span style="font-size: 26px;position: absolute; top: 43%; left: 56%;"> Deposit</span> <br> <br> WE CONSTRUCT FIRST, YOU PAY LATER
+           </h1>
+           <h1 id="text3"class="hide text_list" style="padding-top: 120px;"> CONSULT FIRST, PAY LATER</h1>
+        </div>
+
+        <button class="button">Book a free consultation</button>
+         
+
+    </div>  
+<section>
+        
+    <div class="container">
+        <center><h1 style="padding: 10px; font-size: 34px;">PREFAB ROOMS</h1></center>
+         
+        <center> <hr id="border" style="width: 100px;"></center>
+
+        <p style="font-size: 15px; font-weight: 200; padding: 30px;">A Prefab Room is a complete makeover of a room as shown in the template. The Charges include everything from furniture to furnishings, service to products. Whether it is an electrician or a carpenter, Every kind of execution will be done by us.</p>
+        
+          <div id="scontainer">
+             <div class="card "><img src="images/prefab1.jpg" alt=""><div class="text"><center style="padding-top: 90px;">BEDROOM</center></div></div>
+             <div class="card "><img src="images/prefab2.png" alt=""><div class="text"> <center style="padding-top: 80px;">DINING <br> AREA</center></div></div>
+             <div class="card "><img src="images/prefab3.png" alt=""><div class="text"> <center style="padding-top: 80px;">DRAWING <br>AREA</center></div></div>
+
+          </div>  
+
+    </div>
+         
+    <button class="button" style="top: 80%; background-color: black; ">View in Gallery</button>    
+
+</section> 
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+     var x=1;
+     setInterval(function(){
+         updateText();
+     },5000);
+      
+      function updateText(){
+          x++;
+          jQuery('.text_list').hide();
+          jQuery('#text'+ x).show();
+          if(x==3)
+          {
+              x=0;        
+           }
+      }  
+</script>  
+</body>
+</html>

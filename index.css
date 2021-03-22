@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+.wrap{
+    width: 100%;
+    height: 90vh;
+    background: url(images/bg22.jpg) rgba(0,0,0,0.6) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    background-blend-mode: overlay;
+    transition: 5s;
+    animation: animate 15s ease-in-out infinite alternate-reverse forwards;
+    animation-play-state: running;
+   
+ 
+}
+@keyframes animate{
+  0%{
+    background-image: url(images/bg22.jpg);
+  }
+   50%{
+    background-image: url(images/bg33.jpg);
+  }
+  100%{
+    background-image: url(images/bg44.jpg);
+  }
+   
+}
+header{
+    position: fixed;
+    
+    width: 100%;
+    
+    padding: 0 50px;
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
+}
+header .logo img{
+    float: left;
+    width: 170px;
+    height: 170px;
+    position: fixed;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+header .menu{
+   font-size: 20px;
+   font-weight:500;
+   color: #fff;
+   float: right;
+   
+   margin-right: 15%;
+   margin-top: 60px;
+}
+header ul li{
+    display: inline-block;
+    padding: 12px;
+}
+header ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    margin: 0 28px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+        
+}
+.menu ul li a:after{
+  content: ""; /* This is necessary for the pseudo element to work. */ 
+  display: block; /* This will put the pseudo element on its own line. */
+  width: 10%; /* Change this to whatever width you want to have before hover. */
+  padding-top: 5px;
+  margin-left: 15px; /* This creates some space between the element and the border. */
+  border-bottom: 2px solid rgba(0,0,0,0); /* This creates the border. Replace black with whatever color you want. */
+  transition: .5s ease-in-out; /* This establishes the amount of time in seconds the animation should take from start to finish */
+}
+
+.menu ul li a:hover:after {
+  width: 100%; 
+  border-bottom: 2px solid #fff;/* This will be the new width of your border when on hover */
+}
+#text {
+  width: 72%;
+  height: 50%;
+  /* background-color: rgb(223, 35, 138); */
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%,-48%);
+  text-align: center;
+  
+    
+}
+#text h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-left: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+#text .hide{
+  display: none;
+}
+.button{
+  width: 180px;
+  height: 55px;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-55%,50%);
+  cursor: pointer;
+}
+.button:hover{
+ background-color: #fff;
+  border-color: rgba(255, 255, 255, 0.822);
+  color:black;
+}
+ 
+section{
+  position: relative;
+  width: 100%;
+  height: 550px;
+  /* background-color: rgb(143, 102, 102); */
+  
+}
+
+ .container hr #border{
+  border: 3px solid rgb(163, 158, 158); 
+   position: absolute;
+   top:10%;
+   left: 50%;  
+}
+section .container{
+  width: 80%;
+  height: 500px;
+  /* background-color: pink; */
+  position: absolute;
+  top: 10px;
+  left: 10%;
+  
+}
+.container #scontainer{
+  width: 100%;
+  height: 260px;
+  /* background-color: purple; */
+  position:absolute ;
+  top: 170px;
+}
+ .container #scontainer .card{
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  display: inline-block;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin:5px 25px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  transition: .5s ease;
+  
+}
+.card:hover{
+  border-color: black;
+}
+.card:hover .text{
+  opacity: 1;
+
+}
+ 
+ .text {
+   width: 80%;
+   height: 80%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.514);
+  color: white;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+  transition: .5s ease;
+  opacity: 0;
+  
+} 
+.button:nth-child(2):hover{
+  color:#fff;
+}
+
